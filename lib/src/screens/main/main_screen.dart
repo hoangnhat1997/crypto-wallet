@@ -48,14 +48,14 @@ class MainScreen extends GetView<MainController> {
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                label: 'Home',
+                label: 'Wallet',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.book),
-                label: 'Home',
+                label: 'Transaction',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.display_settings_rounded),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
