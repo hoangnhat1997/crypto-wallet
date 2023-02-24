@@ -12,7 +12,7 @@ class CoinItem extends StatelessWidget {
       height: 60,
       child: Row(
         children: <Widget>[
-          Container(
+          SizedBox(
             height: 50,
             width: 50,
             child: ExtendedImage.network(imgCoin),
@@ -40,6 +40,5 @@ class CoinItem extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }

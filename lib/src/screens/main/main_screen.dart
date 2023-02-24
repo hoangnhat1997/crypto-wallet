@@ -1,4 +1,3 @@
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:crypto_wallet/src/controllers/main/main_controller.dart';
 import 'package:flutter/material.dart';
 
