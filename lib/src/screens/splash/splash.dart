@@ -7,9 +7,10 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-          child: FlutterLogo(
-        size: 160,
-      )),
+        child: FlutterLogo(
+          size: 160,
+        ),
+      ),
     );
   }
 }
