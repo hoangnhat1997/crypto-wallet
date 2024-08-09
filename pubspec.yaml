@@ -39,8 +39,8 @@ dependencies:
   candlesticks: ^2.1.0
   bottom_navy_bar: ^6.0.0
   get: ^4.6.5
-  http: ^0.13.5
-  extended_image: ^7.0.2
+  http: ^1.2.2
+  extended_image: ^8.1.1
   cupertino_icons: ^1.0.2
   web_socket_channel: ^2.3.0
   json_annotation: ^4.8.0
