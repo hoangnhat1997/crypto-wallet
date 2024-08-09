@@ -166,7 +166,8 @@ class HomeScreen extends GetView<HomeController> {
                               height: 50,
                               width: 60,
                               child: ExtendedImage.network(
-                                  'https://s2.coinmarketcap.com/static/img/coins/200x200/1.png'),
+                                'https://s2.coinmarketcap.com/static/img/coins/200x200/1.png',
+                              ),
                             ),
                             Container(
                               margin: const EdgeInsets.only(left: 10.0),

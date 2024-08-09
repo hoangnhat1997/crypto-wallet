@@ -19,9 +19,9 @@ class CoinItem extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.only(left: 10.0),
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
+              children: <Widget>[
                 Text('Bitcoin'),
                 Text('BTC'),
               ],
@@ -31,9 +31,9 @@ class CoinItem extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.only(right: 10.0),
               alignment: Alignment.centerRight,
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[Text('\$23.256'), Text('+5.97%')],
+                children: <Widget>[Text('\$23.256'), Text('+5.97%')],
               ),
             ),
           )

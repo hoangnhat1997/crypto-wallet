@@ -38,9 +38,9 @@ dependencies:
   flutter_easyloading: ^3.0.5
   candlesticks: ^2.1.0
   bottom_navy_bar: ^6.0.0
-  get: ^4.6.5
+  get: ^4.6.6
   http: ^1.2.2
-  extended_image: ^8.1.1
+  extended_image: ^8.0.0
   cupertino_icons: ^1.0.2
   web_socket_channel: ^2.3.0
   json_annotation: ^4.8.0
