@@ -1,6 +1,6 @@
 import 'dart:convert';
+import 'package:crypto_wallet/src/providers/coinbase_provider.dart';
 import 'package:get/get.dart';
-import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'package:crypto_wallet/src/models/coinbase_item.dart';
 
@@ -10,9 +10,10 @@ class HomeController extends GetxController {
   @override
   void onReady() async {
     super.onReady();
-    final channel = WebSocketChannel.connect(
-      Uri.parse('wss://ws-feed.pro.coinbase.com'),
-    );
+    final channel = CoinbaseProvider().channel;
+    //  WebSocketChannel.connect(
+    //   Uri.parse('wss://ws-feed.pro.coinbase.com'),
+    // );
 
     channel.sink.add(
       jsonEncode(

@@ -31,7 +31,7 @@ class HomeScreen extends GetView<HomeController> {
                           fontSize: 26.0, fontWeight: FontWeight.w500),
                     ),
                   ),
-                  const Spacer(),
+                  // const Spacer(),
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -39,15 +39,23 @@ class HomeScreen extends GetView<HomeController> {
                         Container(
                           margin: const EdgeInsets.only(right: 5.0),
                           child: IconButton(
-                            icon: const Icon(Icons.search, size: 32.0),
+                            icon: const Icon(Icons.search, size: 25.0),
                             onPressed: () {},
                           ),
                         ),
                         Container(
-                          margin: const EdgeInsets.only(right: 15.0),
+                          margin: const EdgeInsets.only(right: 5.0),
                           child: IconButton(
                             icon: const Icon(Icons.add_alert_outlined,
-                                size: 32.0),
+                                size: 25.0),
+                            onPressed: () {},
+                          ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(right: 5.0),
+                          child: IconButton(
+                            icon: const Icon(Icons.add_circle_outline,
+                                size: 25.0),
                             onPressed: () {},
                           ),
                         )
