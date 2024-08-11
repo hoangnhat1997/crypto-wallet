@@ -6,8 +6,6 @@ import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../components/components.dart';
-
 class HomeScreen extends GetView<HomeController> {
   const HomeScreen({super.key});
 

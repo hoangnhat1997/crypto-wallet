@@ -45,6 +45,7 @@ dependencies:
   web_socket_channel: ^2.3.0
   json_annotation: ^4.8.0
   web3dart: ^2.7.3
+  solana_mobile_client: ^0.1.1+1
 
 dev_dependencies:
   flutter_test:
