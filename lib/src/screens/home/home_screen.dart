@@ -54,7 +54,9 @@ class HomeScreen extends GetView<HomeController> {
                           child: IconButton(
                             icon: const Icon(Icons.add_circle_outline,
                                 size: 25.0),
-                            onPressed: () {},
+                            onPressed: () {
+                              controller.connectSolona();
+                            },
                           ),
                         )
                       ],

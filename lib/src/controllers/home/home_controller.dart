@@ -3,6 +3,7 @@ import 'package:crypto_wallet/src/providers/coinbase_provider.dart';
 import 'package:get/get.dart';
 
 import 'package:crypto_wallet/src/models/coinbase_item.dart';
+import 'package:solana/solana.dart';
 
 class HomeController extends GetxController {
   final RxMap<String, CoinbaseItem> results = RxMap<String, CoinbaseItem>();
@@ -49,6 +50,13 @@ class HomeController extends GetxController {
       onError: (error) {
         print(error);
       },
+    );
+  }
+
+  void connectSolona() {
+    SolanaClient(
+      rpcUrl: Uri.parse('https://api.testnet.solana.com'),
+      websocketUrl: Uri.parse('wss://api.testnet.solana.com'),
     );
   }
 }
