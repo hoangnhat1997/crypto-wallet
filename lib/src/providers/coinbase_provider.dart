@@ -8,6 +8,6 @@ class CoinbaseProvider {
   }
 
   var channel = WebSocketChannel.connect(
-    Uri.parse('wss://ws-feed.pro.coinbase.com'),
+    Uri.parse('wss://ws-feed.exchange.coinbase.com'),
   );
 }

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class CoinbaseItem {
   final String productId;
   final double price;

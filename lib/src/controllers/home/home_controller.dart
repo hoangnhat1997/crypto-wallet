@@ -12,8 +12,9 @@ class HomeController extends GetxController {
   void onReady() async {
     super.onReady();
     final channel = CoinbaseProvider().channel;
-    //  WebSocketChannel.connect(
-    //   Uri.parse('wss://ws-feed.pro.coinbase.com'),
+
+    // final channel = WebSocketChannel.connect(
+    //   Uri.parse('wss://ws-feed.exchange.coinbase.com'),
     // );
 
     channel.sink.add(
@@ -24,6 +25,10 @@ class HomeController extends GetxController {
             {
               'name': 'ticker',
               'product_ids': [
+                "ADA-USD",
+                'XRP-USD',
+                'SOL-USD',
+                "ETH-USD",
                 'BTC-USD',
               ],
             },

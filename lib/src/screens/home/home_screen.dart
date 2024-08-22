@@ -167,7 +167,8 @@ class HomeScreen extends GetView<HomeController> {
                     itemBuilder: (BuildContext context, int index) {
                       final CoinbaseItem coinbase =
                           controller.results.values.toList()[index];
-                      return SizedBox(
+                      return Container(
+                        margin: const EdgeInsets.all(10.0),
                         child: Row(
                           children: <Widget>[
                             SizedBox(
