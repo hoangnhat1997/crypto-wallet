@@ -29,7 +29,6 @@ class HomeScreen extends GetView<HomeController> {
                           fontSize: 26.0, fontWeight: FontWeight.w500),
                     ),
                   ),
-                  // const Spacer(),
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
