@@ -7,7 +7,13 @@ import 'package:solana/solana.dart';
 
 class HomeController extends GetxController {
   final RxMap<String, CoinbaseItem> results = RxMap<String, CoinbaseItem>();
+  final _balance = 0.0.obs;
+  final _wallet = Wallet;
 
+  final SolanaClient _solanaClient = SolanaClient(
+    rpcUrl: Uri.parse('https://api.testnet.solana.com'),
+    websocketUrl: Uri.parse('wss://api.testnet.solana.com'),
+  );
   @override
   void onReady() async {
     super.onReady();
@@ -57,6 +63,9 @@ class HomeController extends GetxController {
       },
     );
   }
+
+  Type get wallet => _wallet;
+  double get balance => _balance.value;
 
   void connectSolona() {
     SolanaClient(
