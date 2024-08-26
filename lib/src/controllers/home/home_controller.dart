@@ -67,6 +67,28 @@ class HomeController extends GetxController {
   Type get wallet => _wallet;
   double get balance => _balance.value;
 
+  void createWallet() {
+    final wallet = Wallet.generate();
+    _wallet.value = wallet;
+    updateBalance();
+  }
+
+  Future<void> updateBalance() async {
+    final balance = await _solanaClient.rpcClient.getBalance(wallet.address);
+    _balance.value = balance / lamportsPerSol;
+  }
+
+  Future<void> sendSol(String toAddress, double amount) async {
+    await _solanaClient.rpcClient
+        .requestAirdrop(wallet.address, lamportsPerSol * amount);
+    await _solanaClient.rpcClient.transfer(
+      sender: wallet,
+      recipient: toAddress,
+      amount: lamportsPerSol * amount,
+    );
+    updateBalance();
+  }
+
   void connectSolona() {
     SolanaClient(
       rpcUrl: Uri.parse('https://api.testnet.solana.com'),
