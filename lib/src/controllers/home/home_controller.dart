@@ -8,7 +8,7 @@ import 'package:solana/solana.dart';
 class HomeController extends GetxController {
   final RxMap<String, CoinbaseItem> results = RxMap<String, CoinbaseItem>();
   final _balance = 0.0.obs;
-  final _wallet = Wallet;
+  var _wallet = Wallet;
 
   final SolanaClient _solanaClient = SolanaClient(
     rpcUrl: Uri.parse('https://api.testnet.solana.com'),
@@ -68,20 +68,20 @@ class HomeController extends GetxController {
   double get balance => _balance.value;
 
   void createWallet() {
-    final wallet = Wallet.generate();
-    _wallet.value = wallet;
+    final wallet = Wallet;
+    _wallet = wallet;
     updateBalance();
   }
 
   Future<void> updateBalance() async {
-    final balance = await _solanaClient.rpcClient.getBalance(wallet.address);
-    _balance.value = balance / lamportsPerSol;
+    final balance = await _solanaClient.rpcClient.getBalance(wallet as String);
+    _balance.value = balance.balance / lamportsPerSol;
   }
 
   Future<void> sendSol(String toAddress, double amount) async {
     await _solanaClient.rpcClient
-        .requestAirdrop(wallet.address, lamportsPerSol * amount);
-    await _solanaClient.rpcClient.transfer(
+        .requestAirdrop(wallet as String, (lamportsPerSol * amount) as int);
+    await _solanaClient.transferSol(
       sender: wallet,
       recipient: toAddress,
       amount: lamportsPerSol * amount,
